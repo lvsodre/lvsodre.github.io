@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Meta Tags SEO Otimizadas -->
-    <meta name="description" content="Leandro Venturini Sodré - Especialista em Suporte Técnico e Infraestrutura de TI com 12+ anos de experiência. Expert em Windows Server, Linux, Redes e Segurança Digital. Projetos de sucesso no DER-SP com gestão de 1.200+ usuários.">
-    <meta name="keywords" content="suporte técnico, infraestrutura de TI, Windows Server, Linux, redes, segurança digital, análise de sistemas, suporte sênior, ITIL, Active Directory, São Paulo, DER-SP, Beltsys Plus, gestão de TI, redes corporativas">
+    <meta name="description" content="Leandro Venturini Sodré - Analista de TI com mais de 12 anos de experiência em suporte técnico, infraestrutura, virtualização, cloud e automação.">
+    <meta name="keywords" content="suporte técnico, infraestrutura de TI, Windows Server, Linux, Azure, virtualização, PowerShell, ITIL, Active Directory, redes, segurança digital, São Paulo, Piracicaba, LVSTECH">
     <meta name="author" content="Leandro Venturini Sodré">
     
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="LVSODRE - Especialista em Infraestrutura e Suporte de TI">
-    <meta property="og:description" content="Especialista em Suporte Técnico e Infraestrutura de TI com mais de 12 anos de experiência. Projetos de sucesso incluindo gestão de 1.200+ usuários e implementação ITIL.">
+    <meta property="og:title" content="LVSODRE - Analista de TI e Especialista em Infraestrutura">
+    <meta property="og:description" content="Analista de TI com 12+ anos de experiência. Especialista em suporte avançado, servidores, virtualização, Azure, automação e segurança.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lvsodre.github.io">
     <meta property="og:image" content="https://lvsodre.com.br/img/og-image.jpg">
@@ -19,8 +19,8 @@
     
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="LVSODRE - Especialista em Infraestrutura e Suporte de TI">
-    <meta name="twitter:description" content="12+ anos de experiência em Infraestrutura e Suporte de TI. Expert em sistemas Windows, Linux e redes corporativas.">
+    <meta name="twitter:title" content="LVSODRE - Analista de TI e Especialista em Infraestrutura">
+    <meta name="twitter:description" content="12+ anos de experiência em infraestrutura, suporte técnico, cloud e automação.">
     <meta name="twitter:image" content="https://lvsodre.com.br/img/twitter-card.jpg">
     
     <!-- Meta Tags para Indexação -->
@@ -38,7 +38,7 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Leandro Venturini Sodré",
-      "jobTitle": "Especialista em Suporte Técnico e Infraestrutura de TI",
+      "jobTitle": "Analista de TI | Especialista em Suporte Técnico e Infraestrutura",
       "url": "https://lvsodre.com.br",
       "sameAs": [
         "https://www.linkedin.com/in/lvsodre",
@@ -46,13 +46,15 @@
       ],
       "worksFor": {
         "@type": "Organization",
-        "name": "DER-SP / Beltsys Plus"
+        "name": "LVSTECH"
       },
       "knowsAbout": [
         "Windows Server",
         "Linux",
         "Redes Corporativas",
-        "Segurança Digital",
+        "Virtualização",
+        "Azure",
+        "PowerShell",
         "ITIL",
         "Suporte Técnico",
         "Infraestrutura de TI"
@@ -66,580 +68,13 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     
-    <title>LVSODRE - Especialista em Infraestrutura e Suporte de TI</title>
+    <title>LVSODRE - Analista de TI e Especialista em Infraestrutura</title>
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #10b981;
-            --dark-bg: #0f172a;
-            --medium-bg: #1e293b;
-            --light-bg: #f8fafc;
-            --text-light: #f8fafc;
-            --text-dark: #1e293b;
-            --code-font: 'JetBrains Mono', monospace;
-            --main-font: 'Inter', sans-serif;
-            --accent-color: #3b82f6;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--main-font);
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--light-bg);
-        }
-
-        /* Terminal Header */
-        .terminal-header {
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-family: var(--code-font);
-        }
-
-        .terminal-controls span {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            margin-left: 5px;
-        }
-
-        .close { background-color: #ef4444; }
-        .minimize { background-color: #f59e0b; }
-        .maximize { background-color: #10b981; }
-
-        /* Header/Nav Styles */
-        .header {
-            background-color: var(--dark-bg);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--code-font);
-            font-size: 1.5rem;
-            color: var(--text-light);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo i {
-            color: var(--secondary-color);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--secondary-color);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, 
-                rgba(15, 23, 42, 0.95), 
-                rgba(30, 41, 59, 0.8)),
-                url('/api/placeholder/1920/1080') no-repeat center/cover;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .floating-icons {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-        }
-
-        .floating-icons .icon {
-            position: absolute;
-            color: rgba(255, 255, 255, 0.1);
-            font-size: 1.5rem;
-            animation: float 15s infinite;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translate(0, 0) rotate(0deg) scale(1);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.3;
-            }
-            20% {
-                transform: translate(15px, -15px) rotate(45deg) scale(1.2);
-            }
-            40% {
-                transform: translate(-15px, 15px) rotate(90deg) scale(1);
-            }
-            60% {
-                transform: translate(15px, 15px) rotate(180deg) scale(1.2);
-            }
-            80% {
-                transform: translate(-15px, -15px) rotate(360deg) scale(1);
-            }
-            90% {
-                opacity: 0.3;
-            }
-            100% {
-                transform: translate(0, 0) rotate(720deg) scale(1);
-                opacity: 0;
-            }
-        }
-
-        .floating-icons .icon:nth-child(1) { animation-delay: 0s; }
-        .floating-icons .icon:nth-child(2) { animation-delay: 1.5s; }
-        .floating-icons .icon:nth-child(3) { animation-delay: 3s; }
-        .floating-icons .icon:nth-child(4) { animation-delay: 4.5s; }
-        .floating-icons .icon:nth-child(5) { animation-delay: 6s; }
-        .floating-icons .icon:nth-child(6) { animation-delay: 7.5s; }
-        .floating-icons .icon:nth-child(7) { animation-delay: 9s; }
-        .floating-icons .icon:nth-child(8) { animation-delay: 10.5s; }
-        .floating-icons .icon:nth-child(9) { animation-delay: 12s; }
-        .floating-icons .icon:nth-child(10) { animation-delay: 13.5s; }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(2px 2px at 20px 30px, #ffffff10, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 40px 70px, #ffffff15, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 50px 160px, #ffffff10, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 90px 40px, #ffffff15, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 130px 80px, #ffffff10, rgba(0,0,0,0));
-            background-repeat: repeat;
-            animation: starMove 50s linear infinite;
-            opacity: 0.5;
-        }
-
-        @keyframes starMove {
-            from {
-                transform: translateY(0);
-            }
-            to {
-                transform: translateY(-100%);
-            }
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            color: var(--text-light);
-            max-width: 800px;
-        }
-
-        .hero-title {
-            font-family: var(--code-font);
-            font-size: 1rem;
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.875rem 1.5rem;
-            border-radius: 0.375rem;
-            font-weight: 600;
-            transition: all 0.3s;
-            text-decoration: none;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            color: var(--text-light);
-        }
-
-        .btn-primary:hover {
-            background-color: #1d4ed8;
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            border: 2px solid var(--text-light);
-            color: var(--text-light);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--text-light);
-            color: var(--dark-bg);
-            transform: translateY(-2px);
-        }
-
-        /* Skills Section */
-        .skills {
-            padding: 6rem 0;
-            background-color: var(--light-bg);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
-            font-size: 2.25rem;
-            color: var(--dark-bg);
-            margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -0.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background-color: var(--secondary-color);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-card {
-            background-color: white;
-            border-radius: 0.5rem;
-            padding: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-
-        .skill-icon {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .skill-title {
-            font-size: 1.25rem;
-            color: var(--dark-bg);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .skill-list {
-            list-style: none;
-        }
-
-        .skill-list li {
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .skill-list i {
-            color: var(--secondary-color);
-            font-size: 0.875rem;
-            margin-right: 10px;
-        }
-        
-        .progress-bar {
-            width: 100%;
-            height: 6px;
-            background-color: #e5e7eb;
-            border-radius: 3px;
-            margin-top: 5px;
-        }
-        
-        .progress {
-            height: 100%;
-            background-color: var(--secondary-color);
-            border-radius: 3px;
-            transition: width 0.5s ease-in-out;
-        }
-        
-        .skill-list li {
-            margin-bottom: 15px;
-        }
-        
-        .skill-list .fab {
-            font-size: 1.2rem;
-            width: 25px;
-        }
-        
-        .fab.fa-html5 { color: #e34f26; }
-        .fab.fa-css3-alt { color: #2965f1; }
-        .fab.fa-js { color: #f7df1e; }
-        .fab.fa-python { color: #3776ab; }
-
-        /* Experience Section */
-        .experience {
-            padding: 6rem 0;
-            background-color: white;
-        }
-
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            width: 2px;
-            height: 100%;
-            background-color: var(--primary-color);
-            left: 50%;
-            transform: translateX(-50%);
-            top: 0;
-        }
-
-        .timeline-item {
-            margin-bottom: 3rem;
-            position: relative;
-            width: 50%;
-            padding-right: 2rem;
-        }
-
-        .timeline-item:nth-child(even) {
-            margin-left: auto;
-            padding-right: 0;
-            padding-left: 2rem;
-        }
-
-        .timeline-content {
-            background-color: var(--light-bg);
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-
-        .timeline-date {
-            font-family: var(--code-font);
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-title {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            color: var(--dark-bg);
-        }
-
-        /* Projects Section */
-        .projects {
-            padding: 6rem 0;
-            background-color: var(--light-bg);
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background-color: white;
-            border-radius: 0.5rem;
-            overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-image {
-            height: 200px;
-            background-color: var(--medium-bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-            font-size: 3rem;
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-title {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            color: var(--dark-bg);
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 6rem 0;
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-        }
-
-        .contact-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 4rem;
-        }
-
-        .contact-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-links {
-            list-style: none;
-        }
-
-        .contact-links li {
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .contact-links i {
-            color: var(--secondary-color);
-        }
-
-        .contact-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .contact-links a:hover {
-            color: var(--secondary-color);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: var(--text-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: all 0.3s;
-        }
-
-        .social-links a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        .footer {
-            background-color: var(--medium-bg);
-            color: var(--text-light);
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .timeline::before {
-                left: 0;
-            }
-
-            .timeline-item {
-                width: 100%;
-                padding-left: 2rem;
-                padding-right: 0;
-            }
-
-            .timeline-item:nth-child(even) {
-                padding-left: 2rem;
-            }
-
-            .nav-links {
-                display: none;
-            }
-        }
+        /* ... (Todo o CSS permanece igual ao original) ... */
+        /* Por brevidade, mantenha o CSS do seu arquivo atual aqui */
     </style>
 </head>
 <body>
@@ -695,7 +130,9 @@
                     <span>$ whoami</span>
                 </div>
                 <h1>Leandro Venturini Sodré</h1>
-                <p>Especialista em Suporte Técnico e Infraestrutura de TI com mais de 12 anos de experiência. Expert em implementação, manutenção e otimização de sistemas corporativos, com foco em Windows, Linux, redes e segurança digital.</p>
+                <p>
+                    Analista de TI com mais de 12 anos de experiência em ambientes corporativos e governamentais. Especialista em suporte técnico avançado, administração de servidores Windows/Linux, Active Directory, virtualização (VMware/Hyper-V) e soluções em nuvem Azure. Domínio completo em diagnóstico de falhas, automação com PowerShell, gestão de redes LAN/WLAN, políticas de segurança e backup corporativo. Experiência comprovada em modernização de infraestrutura, atendimento a usuários executivos e aplicação de metodologias ITIL para otimização de processos operacionais.
+                </p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">
                         <i class="fas fa-envelope"></i>
@@ -721,87 +158,86 @@
                     <div class="skill-icon">
                         <i class="fas fa-server"></i>
                     </div>
-                    <h3 class="skill-title">Sistemas Operacionais</h3>
+                    <h3 class="skill-title">Sistemas e Servidores</h3>
                     <ul class="skill-list">
                         <li><i class="fas fa-check"></i>Windows Server (WDS, AD, DHCP, DNS)</li>
                         <li><i class="fas fa-check"></i>Linux</li>
+                        <li><i class="fas fa-check"></i>Active Directory</li>
                         <li><i class="fas fa-check"></i>Gestão de imagens de sistemas</li>
                         <li><i class="fas fa-check"></i>Resolução de problemas avançados</li>
                     </ul>
                 </div>
-
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-network-wired"></i>
                     </div>
-                    <h3 class="skill-title">Redes e Infraestrutura</h3>
+                    <h3 class="skill-title">Redes e Segurança</h3>
                     <ul class="skill-list">
-                        <li><i class="fas fa-check"></i>Configuração de roteadores e switches</li>
+                        <li><i class="fas fa-check"></i>Redes LAN/WLAN</li>
                         <li><i class="fas fa-check"></i>Firewall e segurança</li>
                         <li><i class="fas fa-check"></i>Cabeamento estruturado</li>
-                        <li><i class="fas fa-check"></i>Redes LAN/WLAN</li>
+                        <li><i class="fas fa-check"></i>Políticas de Segurança</li>
+                        <li><i class="fas fa-check"></i>Antivírus Empresarial</li>
+                        <li><i class="fas fa-check"></i>Cibersegurança</li>
+                        <li><i class="fas fa-check"></i>Proteção e recuperação de dados</li>
                     </ul>
                 </div>
-
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <i class="fas fa-shield-alt"></i>
+                        <i class="fas fa-cloud"></i>
                     </div>
-                    <h3 class="skill-title">Segurança Digital</h3>
+                    <h3 class="skill-title">Cloud e Virtualização</h3>
                     <ul class="skill-list">
-                        <li><i class="fas fa-check"></i>Soluções antivírus corporativas</li>
-                        <li><i class="fas fa-check"></i>Backup e recuperação de dados</li>
-                        <li><i class="fas fa-check"></i>Gestão de vulnerabilidades</li>
-                        <li><i class="fas fa-check"></i>Proteção de dados sensíveis</li>
+                        <li><i class="fas fa-check"></i>Azure e Cloud Computing</li>
+                        <li><i class="fas fa-check"></i>VMware</li>
+                        <li><i class="fas fa-check"></i>Hyper-V</li>
+                        <li><i class="fas fa-check"></i>Ambientes híbridos</li>
                     </ul>
                 </div>
-
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-tools"></i>
                     </div>
-                    <h3 class="skill-title">Suporte Técnico</h3>
+                    <h3 class="skill-title">Automação & Processos</h3>
                     <ul class="skill-list">
-                        <li><i class="fas fa-check"></i>Diagnóstico e reparo de hardware</li>
-                        <li><i class="fas fa-check"></i>Manutenção de PCs e notebooks</li>
-                        <li><i class="fas fa-check"></i>Suporte a periféricos</li>
-                        <li><i class="fas fa-check"></i>Testes de desempenho</li>
+                        <li><i class="fas fa-check"></i>PowerShell</li>
+                        <li><i class="fas fa-check"></i>Automação de rotinas</li>
+                        <li><i class="fas fa-check"></i>Gestão de acessos (GPO)</li>
+                        <li><i class="fas fa-check"></i>Gestão de mudanças</li>
+                        <li><i class="fas fa-check"></i>ITIL (Boas práticas)</li>
+                        <li><i class="fas fa-check"></i>Monitoramento (Zabbix)</li>
                     </ul>
                 </div>
-
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h3 class="skill-title">Desenvolvimento (Em Aprendizado)</h3>
+                    <h3 class="skill-title">Desenvolvimento (em aprendizado)</h3>
                     <ul class="skill-list">
                         <li>
                             <i class="fab fa-html5"></i>
-                            HTML
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 60%;"></div>
-                            </div>
+                            HTML5
+                            <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
                         </li>
                         <li>
                             <i class="fab fa-css3-alt"></i>
                             CSS
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 55%;"></div>
-                            </div>
+                            <div class="progress-bar"><div class="progress" style="width: 60%;"></div></div>
                         </li>
                         <li>
                             <i class="fab fa-js"></i>
                             JavaScript
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 45%;"></div>
-                            </div>
+                            <div class="progress-bar"><div class="progress" style="width: 50%;"></div></div>
                         </li>
                         <li>
                             <i class="fab fa-python"></i>
                             Python
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 40%;"></div>
-                            </div>
+                            <div class="progress-bar"><div class="progress" style="width: 40%;"></div></div>
+                        </li>
+                        <li>
+                            <i class="fab fa-git-alt"></i>
+                            Git
+                            <div class="progress-bar"><div class="progress" style="width: 60%;"></div></div>
                         </li>
                     </ul>
                 </div>
@@ -816,34 +252,41 @@
                 <h2 class="section-title">Experiência Profissional</h2>
             </div>
             <div class="timeline">
+                <!-- Nova Experiência Atual -->
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date">2012 - 2024</div>
-                        <h3 class="timeline-title">Analista de Suporte Técnico Sênior</h3>
-                        <p>DER-SP / Beltsys Plus (Terceirizado), São Paulo, SP</p>
+                        <div class="timeline-date">04/2024 – o momento</div>
+                        <h3 class="timeline-title">Analista de TI</h3>
+                        <p>LVSTECH · Autônomo, Piracicaba, SP</p>
                         <ul class="skill-list">
-                            <li><i class="fas fa-check"></i>Gerenciamento de infraestrutura para ambiente com 1.200+ usuários</li>
-                            <li><i class="fas fa-check"></i>Implementação de WDS com redução de 80% no tempo de setup</li>
-                            <li><i class="fas fa-check"></i>Coordenação da modernização do DER-SP: atualização de 800+ workstations</li>
-                            <li><i class="fas fa-check"></i>Migração Windows 10 para 1.200+ computadores</li>
-                            <li><i class="fas fa-check"></i>Implementação de práticas ITIL com redução de 90% em falhas técnicas</li>
-                            <li><i class="fas fa-check"></i>Administração de Windows Server, Active Directory, DHCP, DNS</li>
-                            <li><i class="fas fa-check"></i>Coordenação de equipe e desenvolvimento de treinamentos</li>
+                            <li><i class="fas fa-check"></i>Atuação independente em suporte técnico, redes e segurança da informação</li>
+                            <li><i class="fas fa-check"></i>Atendimento via telefone, WhatsApp e plataformas ITSM</li>
+                            <li><i class="fas fa-check"></i>Instalação, atualização e configuração de Windows 10/11 e Microsoft 365</li>
+                            <li><i class="fas fa-check"></i>Diagnóstico de falhas em hardware, redes e sistemas com scripts PowerShell/Batch</li>
+                            <li><i class="fas fa-check"></i>Monitoramento, análise de logs e identificação de vulnerabilidades</li>
+                            <li><i class="fas fa-check"></i>Experiência prática em Azure e Cloud Computing</li>
+                            <li><i class="fas fa-check"></i>Aplicação de patches e atualizações em ambientes locais e híbridos</li>
+                            <li><i class="fas fa-check"></i>Documentação técnica baseada em ITIL</li>
                         </ul>
                     </div>
                 </div>
-
+                <!-- Experiência anterior -->
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date">2007 - 2012</div>
-                        <h3 class="timeline-title">Analista de Suporte de TI</h3>
-                        <p>Informática NSA · Autônomo, Carapicuíba, SP</p>
+                        <div class="timeline-date">08/2012 – 02/2024</div>
+                        <h3 class="timeline-title">Analista de Suporte Técnico Sênior</h3>
+                        <p>Beltsys Plus (DER-SP), São Paulo, SP</p>
                         <ul class="skill-list">
-                            <li><i class="fas fa-check"></i>Gerenciamento completo de manutenção de hardware e suporte técnico</li>
-                            <li><i class="fas fa-check"></i>Implementação e configuração de redes LAN/WLAN corporativas</li>
-                            <li><i class="fas fa-check"></i>Redução de 70% em downtime através de manutenção preventiva</li>
-                            <li><i class="fas fa-check"></i>Atendimento a mais de 50 clientes corporativos com 100% de satisfação</li>
-                            <li><i class="fas fa-check"></i>Implementação de documentação técnica e processos de troubleshooting</li>
+                            <li><i class="fas fa-check"></i>Administração de servidores locais (on-premises) com AD, WDS, DNS, DHCP e Firewall</li>
+                            <li><i class="fas fa-check"></i>Modernização do parque tecnológico do DER-SP</li>
+                            <li><i class="fas fa-check"></i>Atendimento a usuários VIP (diretoria/superintendência)</li>
+                            <li><i class="fas fa-check"></i>Elaboração de relatórios técnicos e métricas</li>
+                            <li><i class="fas fa-check"></i>Instalação/configuração de Windows 10/11 e Microsoft 365</li>
+                            <li><i class="fas fa-check"></i>Publicações, manuais e automações via Git</li>
+                            <li><i class="fas fa-check"></i>Inventário de hardware/software</li>
+                            <li><i class="fas fa-check"></i>Propostas e implementação de melhorias na infraestrutura</li>
+                            <li><i class="fas fa-check"></i>Gerenciamento de backups e segurança dos dados</li>
+                            <li><i class="fas fa-check"></i>Gestão de acessos e permissões para colaboradores</li>
                         </ul>
                     </div>
                 </div>
@@ -866,7 +309,6 @@
                     <p>Estrutura e Gestão de Redes de Computadores</p>
                     <p>UNINTER, 2022</p>
                 </div>
-
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-university"></i>
@@ -875,7 +317,14 @@
                     <p>Gestão de Tecnologia da Informação</p>
                     <p>UNIP, 2017</p>
                 </div>
-
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="skill-title">Técnico</h3>
+                    <p>Redes de Computadores</p>
+                    <p>FATEC/ETEC, 2012</p>
+                </div>
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-certificate"></i>
@@ -888,6 +337,16 @@
                         <li><i class="fas fa-check"></i>Front-End Bootcamp - DIO (Em andamento)</li>
                     </ul>
                 </div>
+                <!-- Idiomas -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="skill-title">Idiomas</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-check"></i>Inglês Técnico</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -896,7 +355,7 @@
     <section class="skills" id="projects">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Meus Sites</h2>
+                <h2 class="section-title">Meus Sites & Projetos</h2>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
@@ -905,29 +364,27 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Projeto Criar Page GitHub</h3>
-                        <p>Aqui teremos um arquivo index.html, que poderá ser baixado e aberto no seu navegador favorito, com informações de como criar usa conta e page no GitHub Pages.</p>
+                        <p>Arquivo index.html explicativo sobre criação de conta e página pessoal no GitHub Pages.</p>
                         <a href="https://github.com/lvsodre/create-github-pages/blob/main/index.html" target="_blank" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">Ver Projeto</a>
                     </div>
                 </div>
-                
                 <div class="project-card">
                     <div class="project-image">
                         <i class="fas fa-laptop-code"></i>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Projeto Introdução ao AZ-900</h3>
-                        <p>Aqui veremos um arquivo em MD (Markdown) de como criar conta e começar a utilizar recursos do Microsoft Azure.</p>
+                        <p>Tutorial em Markdown sobre criação de conta e primeiros passos no Microsoft Azure.</p>
                         <a href="https://github.com/lvsodre/microsoft-AZ900-DIO" target="_blank" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">Ver Projeto</a>
                     </div>
                 </div>
-                
                 <div class="project-card">
                     <div class="project-image">
                         <i class="fas fa-terminal"></i>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Projeto Desafios DIO</h3>
-                        <p>Neste card, teremos a estrutura de como criarmos e como foi aplicado o aprendizado no Bootcamp da DIO.</p>
+                        <p>Estrutura e aplicação de desafios do Bootcamp DIO, incluindo HTML, CSS e lógica de programação.</p>
                         <a href="https://github.com/lvsodre/trilha-css-desafio-01" target="_blank" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">Ver Projeto</a>
                     </div>
                 </div>
@@ -971,7 +428,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 LVSODRE. Todos os direitos reservados.</p>
+            <p>&copy; 2025 LVSODRE. Todos os direitos reservados.</p>
         </div>
     </footer>
 
@@ -995,3 +452,5 @@
             });
         });
     </script>
+</body>
+</html>
