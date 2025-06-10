@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Meta Tags SEO Otimizadas -->
-    <meta name="description" content="Leandro Venturini Sodré - Analista de TI com mais de 12 anos de experiência em TI. Expert em suporte técnico, atendimento ao usuário em diversos níveis. Sólidos conhecimentos em infraestrutura, virtualização. Estudando para alcançar níveis em cloud e automação.">
-    <meta name="keywords" content="suporte técnico, infraestrutura de TI, Windows Server, Linux, Azure, virtualização, PowerShell, ITIL, Active Directory, redes, segurança digital, São Paulo, Piracicaba, LVSTECH">
+    <!-- ======================= -->
+    <!--    SEO OTIMIZADO        -->
+    <!-- ======================= -->
+    <meta name="description" content="Leandro Venturini Sodré - Analista de TI com mais de 12 anos de experiência em suporte técnico, infraestrutura de servidores, virtualização, cloud, automação e segurança.">
+    <meta name="keywords" content="suporte técnico, infraestrutura de TI, Windows Server, Linux, Azure, virtualização, PowerShell, ITIL, Active Directory, redes, segurança digital, São Paulo, Piracicaba, LVSTECH, analista de TI, consultor TI, cloud computing, automação TI, projetos TI">
     <meta name="author" content="Leandro Venturini Sodré">
-    
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://lvsodre.com.br">
+
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="LVSODRE - Analista de TI e Especialista em Infraestrutura">
-    <meta property="og:description" content="Analista de TI com 12+ anos de experiência. Especialista em suporte avançado, servidores, virtualização, Azure, automação e segurança.">
+    <meta property="og:description" content="Analista de TI com mais de 12 anos de experiência. Especialista em suporte avançado, servidores, virtualização, Azure, automação e segurança.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lvsodre.github.io">
     <meta property="og:image" content="https://lvsodre.com.br/img/og-image.jpg">
@@ -23,16 +28,11 @@
     <meta name="twitter:description" content="12+ anos de experiência em infraestrutura, suporte técnico, cloud e automação.">
     <meta name="twitter:image" content="https://lvsodre.com.br/img/twitter-card.jpg">
     
-    <!-- Meta Tags para Indexação -->
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <link rel="canonical" href="https://lvsodre.com.br">
-    
     <!-- Preload de Recursos Críticos -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" as="style">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
     
-    <!-- Schema.org markup para Person -->
+    <!-- Schema.org markup para Person (ajuda SEO) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -70,9 +70,13 @@
     
     <title>LVSODRE - Analista de TI e Especialista em Infraestrutura</title>
     
+    <!-- Fontes e Ícones -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* ===========================
+           VARIÁVEIS CSS E RESET 
+        =========================== */
         :root {
             --primary-color: #2563eb;
             --secondary-color: #10b981;
@@ -99,7 +103,9 @@
             background-color: var(--light-bg);
         }
 
-        /* Terminal Header */
+        /* ===========================
+           HEADER TIPO TERMINAL
+        =========================== */
         .terminal-header {
             background-color: var(--dark-bg);
             color: var(--text-light);
@@ -122,7 +128,9 @@
         .minimize { background-color: #f59e0b; }
         .maximize { background-color: #10b981; }
 
-        /* Header/Nav Styles */
+        /* ===========================
+           HEADER/NAV
+        =========================== */
         .header {
             background-color: var(--dark-bg);
             padding: 1rem 0;
@@ -175,7 +183,9 @@
             color: var(--secondary-color);
         }
 
-        /* Hero Section */
+        /* ===========================
+           SEÇÃO HERO (INÍCIO)
+        =========================== */
         .hero {
             min-height: 100vh;
             background: linear-gradient(135deg, 
@@ -233,6 +243,7 @@
             }
         }
 
+        /* Animações de delay dos ícones flutuantes */
         .floating-icons .icon:nth-child(1) { animation-delay: 0s; }
         .floating-icons .icon:nth-child(2) { animation-delay: 1.5s; }
         .floating-icons .icon:nth-child(3) { animation-delay: 3s; }
@@ -336,7 +347,9 @@
             transform: translateY(-2px);
         }
 
-        /* Skills Section */
+        /* ===========================
+           SEÇÃO HABILIDADES
+        =========================== */
         .skills {
             padding: 6rem 0;
             background-color: var(--light-bg);
@@ -445,7 +458,9 @@
         .fab.fa-python { color: #3776ab; }
         .fab.fa-git-alt { color: #f14e32; }
 
-        /* Experience Section */
+        /* ===========================
+           SEÇÃO EXPERIÊNCIA
+        =========================== */
         .experience {
             padding: 6rem 0;
             background-color: white;
@@ -501,7 +516,9 @@
             color: var(--dark-bg);
         }
 
-        /* Projects Section */
+        /* ===========================
+           SEÇÃO PROJETOS
+        =========================== */
         .projects {
             padding: 6rem 0;
             background-color: var(--light-bg);
@@ -545,7 +562,9 @@
             color: var(--dark-bg);
         }
 
-        /* Contact Section */
+        /* ===========================
+           SEÇÃO CONTATO
+        =========================== */
         .contact {
             padding: 6rem 0;
             background-color: var(--dark-bg);
@@ -611,7 +630,9 @@
             transform: translateY(-2px);
         }
 
-        /* Footer */
+        /* ===========================
+           FOOTER
+        =========================== */
         .footer {
             background-color: var(--medium-bg);
             color: var(--text-light);
@@ -619,7 +640,9 @@
             padding: 2rem 0;
         }
 
-        /* Responsive Design */
+        /* ===========================
+           RESPONSIVIDADE
+        =========================== */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -646,7 +669,9 @@
     </style>
 </head>
 <body>
-    <!-- Terminal Header -->
+    <!-- ===========================
+         HEADER SIMULAÇÃO DE TERMINAL
+    ============================ -->
     <div class="terminal-header">
         <div class="terminal-controls">
             <span class="close"></span>
@@ -657,7 +682,9 @@
         <div></div>
     </div>
 
-    <!-- Header/Navigation -->
+    <!-- ===========================
+         MENU DE NAVEGAÇÃO
+    ============================ -->
     <header class="header">
         <div class="container nav-container">
             <a href="#" class="logo">
@@ -677,10 +704,12 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- ===========================
+         HERO: SOBRE MIM
+    ============================ -->
     <section class="hero" id="about">
         <div class="floating-icons">
-            <!-- Ícones técnicos flutuantes -->
+            <!-- Ícones técnicos flutuantes (decorativos) -->
             <i class="icon fas fa-server" style="left: 10%; top: 20%"></i>
             <i class="icon fas fa-network-wired" style="left: 20%; top: 60%"></i>
             <i class="icon fas fa-laptop-code" style="left: 80%; top: 15%"></i>
@@ -699,7 +728,7 @@
                 </div>
                 <h1>Leandro Venturini Sodré</h1>
                 <p>
-                    Analista de TI com mais de 12 anos de experiência em ambientes corporativos e governamentais. Especialista em suporte técnico avançado, administração de servidores Windows/Linux, Active Directory, virtualização (VMware/Hyper-V) e soluções em nuvem Azure. Domínio completo em diagnóstico de falhas, automação com PowerShell, gestão de redes LAN/WLAN, políticas de segurança e backup corporativo. Experiência comprovada em modernização de infraestrutura, atendimento a usuários executivos e aplicação de metodologias ITIL para otimização de processos operacionais.
+                    Analista de TI com mais de 12 anos de experiência em ambientes corporativos e governamentais. Especialista em suporte técnico avançado, administração de servidores Windows/Linux, Active Directory, virtualização (VMware/Hyper-V) em ambientes on-premises. Estudando soluções em nuvem Azure e AWS. Esperiência em diagnóstico de falhas, automação com PowerShell. Manutenção em redes LAN/WLAN, políticas de segurança e backup corporativo. Expert em atendimento a usuários executivos e aplicação de metodologias de melhores práticas em processos operacionais.
                 </p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">
@@ -715,13 +744,16 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- ===========================
+         HABILIDADES TÉCNICAS
+    ============================ -->
     <section class="skills" id="skills">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Habilidades Técnicas</h2>
             </div>
             <div class="skills-grid">
+                <!-- Habilidades em sistemas e servidores -->
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-server"></i>
@@ -735,6 +767,7 @@
                         <li><i class="fas fa-check"></i>Resolução de problemas avançados</li>
                     </ul>
                 </div>
+                <!-- Habilidades em redes e segurança -->
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-network-wired"></i>
@@ -750,6 +783,7 @@
                         <li><i class="fas fa-check"></i>Proteção e recuperação de dados</li>
                     </ul>
                 </div>
+                <!-- Cloud e virtualização -->
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-cloud"></i>
@@ -762,6 +796,7 @@
                         <li><i class="fas fa-check"></i>Ambientes híbridos</li>
                     </ul>
                 </div>
+                <!-- Automação e processos -->
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-tools"></i>
@@ -776,6 +811,7 @@
                         <li><i class="fas fa-check"></i>Monitoramento (Zabbix)</li>
                     </ul>
                 </div>
+                <!-- Desenvolvimento -->
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-code"></i>
@@ -813,14 +849,16 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- ===========================
+         EXPERIÊNCIA PROFISSIONAL
+    ============================ -->
     <section class="experience" id="experience">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Experiência Profissional</h2>
             </div>
             <div class="timeline">
-                <!-- Nova Experiência Atual -->
+                <!-- Experiência Atual -->
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-date">04/2024 – o momento</div>
@@ -862,7 +900,9 @@
         </div>
     </section>
 
-    <!-- Education Section -->
+    <!-- ===========================
+         FORMAÇÃO ACADÊMICA
+    ============================ -->
     <section class="skills" id="education">
         <div class="container">
             <div class="section-header">
@@ -919,7 +959,9 @@
         </div>
     </section>
 
-    <!-- Projects/Repositories Section -->
+    <!-- ===========================
+         SEÇÃO DE PROJETOS/SITES
+    ============================ -->
     <section class="skills" id="projects">
         <div class="container">
             <div class="section-header">
@@ -960,7 +1002,9 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ===========================
+         SEÇÃO CONTATO
+    ============================ -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="contact-container">
@@ -993,15 +1037,20 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===========================
+         RODAPÉ
+    ============================ -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 LVSODRE. Todos os direitos reservados.</p>
         </div>
     </footer>
 
+    <!-- ===========================
+         SCRIPTS JS
+    ============================ -->
     <script>
-        // Adicionar classe active ao link da navegação atual
+        // Marca o link como ativo ao clicar (efeito visual no menu)
         const navLinks = document.querySelectorAll('.nav-links a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -1010,7 +1059,7 @@
             });
         });
 
-        // Animação suave do scroll
+        // Animação suave do scroll para âncoras internas
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
