@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO OTIMIZADO -->
+
+    <!-- SEO e Metadados -->
     <meta name="description" content="Leandro Venturini Sodré - Analista de TI com mais de 12 anos de experiência em suporte técnico, infraestrutura, virtualização, cloud e automação.">
     <meta name="keywords" content="suporte técnico, infraestrutura de TI, Windows Server, Linux, Azure, virtualização, PowerShell, ITIL, Active Directory, redes, segurança digital, São Paulo, Piracicaba, LVSTECH, analista de TI, consultor TI, cloud computing, automação TI, projetos TI">
     <meta name="author" content="Leandro Venturini Sodré">
@@ -12,527 +12,419 @@
     <meta name="googlebot" content="index, follow">
     <link rel="canonical" href="https://lvsodre.com.br">
 
-    <!-- Open Graph / Social Media Meta Tags -->
+    <!-- Open Graph / Social Media -->
     <meta property="og:title" content="LVSODRE - Analista de TI e Especialista em Infraestrutura">
-    <meta property="og:description" content="Analista de TI com mais de 12 anos de experiência. Especialista em suporte avançado, servidores, virtualização, Azure, automação e segurança.">
+    <meta property="og:description" content="Analista de TI com mais de 12 anos de experiência. Especialista em suporte, servidores, virtualização, Azure, automação e segurança.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lvsodre.github.io">
     <meta property="og:image" content="https://lvsodre.com.br/img/og-image.jpg">
     <meta property="og:site_name" content="LVSODRE Portfolio">
-    
-    <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="LVSODRE - Analista de TI e Especialista em Infraestrutura">
     <meta name="twitter:description" content="Mais de 12 anos de experiência em infraestrutura, suporte técnico, cloud e automação.">
     <meta name="twitter:image" content="https://lvsodre.com.br/img/twitter-card.jpg">
-    
-    <!-- Preload de Recursos Críticos -->
+
+    <!-- Preload e Fonts -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" as="style">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
-    
-    <!-- Schema.org markup para Person (ajuda SEO) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Leandro Venturini Sodré",
-      "jobTitle": "Analista de TI | Especialista em Suporte Técnico e Infraestrutura",
-      "url": "https://lvsodre.com.br",
-      "sameAs": [
-        "https://www.linkedin.com/in/lvsodre",
-        "https://github.com/lvsodre"
-      ],
-      "worksFor": {
-        "@type": "Organization",
-        "name": "LVSTECH"
-      },
-      "knowsAbout": [
-        "Windows Server",
-        "Linux",
-        "Redes Corporativas",
-        "Virtualização",
-        "Azure",
-        "PowerShell",
-        "ITIL",
-        "Suporte Técnico",
-        "Infraestrutura de TI"
-      ]
-    }
-    </script>
-    
-    <!-- Favicon Tags -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    
-    <title>LVSODRE - Analista de TI e Especialista em Infraestrutura</title>
-    
-    <!-- Fontes e Ícones -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <title>LVSODRE - Analista de TI e Especialista em Infraestrutura</title>
+
+    <!-- CSS com suporte a modo escuro harmonioso -->
     <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #10b981;
-            --dark-bg: #0f172a;
-            --medium-bg: #1e293b;
-            --light-bg: #f8fafc;
-            --text-light: #f8fafc;
-            --text-dark: #1e293b;
-            --code-font: 'JetBrains Mono', monospace;
-            --main-font: 'Inter', sans-serif;
-            --accent-color: #3b82f6;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: var(--main-font);
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--light-bg);
-        }
-        .terminal-header {
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-family: var(--code-font);
-        }
-        .terminal-controls span {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            margin-left: 5px;
-        }
-        .close { background-color: #ef4444; }
-        .minimize { background-color: #f59e0b; }
-        .maximize { background-color: #10b981; }
-        .header {
-            background-color: var(--dark-bg);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-family: var(--code-font);
-            font-size: 1.5rem;
-            color: var(--text-light);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .logo i {
-            color: var(--secondary-color);
-        }
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        .nav-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .nav-links a:hover {
-            color: var(--secondary-color);
-        }
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, 
-                rgba(15, 23, 42, 0.95), 
-                rgba(30, 41, 59, 0.8)),
-                url('/api/placeholder/1920/1080') no-repeat center/cover;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .floating-icons {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-        }
-        .floating-icons .icon {
-            position: absolute;
-            color: rgba(255, 255, 255, 0.1);
-            font-size: 1.5rem;
-            animation: float 15s infinite;
-        }
-        @keyframes float {
-            0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0; }
-            10% { opacity: 0.3; }
-            20% { transform: translate(15px, -15px) rotate(45deg) scale(1.2);}
-            40% { transform: translate(-15px, 15px) rotate(90deg) scale(1);}
-            60% { transform: translate(15px, 15px) rotate(180deg) scale(1.2);}
-            80% { transform: translate(-15px, -15px) rotate(360deg) scale(1);}
-            90% { opacity: 0.3; }
-            100% { transform: translate(0, 0) rotate(720deg) scale(1); opacity: 0;}
-        }
-        .floating-icons .icon:nth-child(1) { animation-delay: 0s; }
-        .floating-icons .icon:nth-child(2) { animation-delay: 1.5s; }
-        .floating-icons .icon:nth-child(3) { animation-delay: 3s; }
-        .floating-icons .icon:nth-child(4) { animation-delay: 4.5s; }
-        .floating-icons .icon:nth-child(5) { animation-delay: 6s; }
-        .floating-icons .icon:nth-child(6) { animation-delay: 7.5s; }
-        .floating-icons .icon:nth-child(7) { animation-delay: 9s; }
-        .floating-icons .icon:nth-child(8) { animation-delay: 10.5s; }
-        .floating-icons .icon:nth-child(9) { animation-delay: 12s; }
-        .floating-icons .icon:nth-child(10) { animation-delay: 13.5s; }
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(2px 2px at 20px 30px, #ffffff10, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 40px 70px, #ffffff15, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 50px 160px, #ffffff10, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 90px 40px, #ffffff15, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 130px 80px, #ffffff10, rgba(0,0,0,0));
-            background-repeat: repeat;
-            animation: starMove 50s linear infinite;
-            opacity: 0.5;
-        }
-        @keyframes starMove {
-            from { transform: translateY(0);}
-            to { transform: translateY(-100%);}
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            color: var(--text-light);
-            max-width: 800px;
-        }
-        .hero-title {
-            font-family: var(--code-font);
-            font-size: 1rem;
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-        }
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-        }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.875rem 1.5rem;
-            border-radius: 0.375rem;
-            font-weight: 600;
-            transition: all 0.3s;
-            text-decoration: none;
-        }
-        .btn-primary {
-            background-color: var(--primary-color);
-            color: var(--text-light);
-        }
-        .btn-primary:hover {
-            background-color: #1d4ed8;
-            transform: translateY(-2px);
-        }
-        .btn-secondary {
-            background-color: transparent;
-            border: 2px solid var(--text-light);
-            color: var(--text-light);
-        }
-        .btn-secondary:hover {
-            background-color: var(--text-light);
-            color: var(--dark-bg);
-            transform: translateY(-2px);
-        }
-        .skills {
-            padding: 6rem 0;
-            background-color: var(--light-bg);
-        }
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        .section-title {
-            font-size: 2.25rem;
-            color: var(--dark-bg);
-            margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -0.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background-color: var(--secondary-color);
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .skill-card {
-            background-color: white;
-            border-radius: 0.5rem;
-            padding: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        .skill-icon {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        .skill-title {
-            font-size: 1.25rem;
-            color: var(--dark-bg);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-        .skill-list {
-            list-style: none;
-        }
-        .skill-list li {
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .skill-list i {
-            color: var(--secondary-color);
-            font-size: 0.875rem;
-            margin-right: 10px;
-        }
-        .progress-bar {
-            width: 100%;
-            height: 6px;
-            background-color: #e5e7eb;
-            border-radius: 3px;
-            margin-top: 5px;
-        }
-        .progress {
-            height: 100%;
-            background-color: var(--secondary-color);
-            border-radius: 3px;
-            transition: width 0.5s ease-in-out;
-        }
-        .skill-list li {
-            margin-bottom: 15px;
-        }
-        .skill-list .fab {
-            font-size: 1.2rem;
-            width: 25px;
-        }
-        .fab.fa-html5 { color: #e34f26; }
-        .fab.fa-css3-alt { color: #2965f1; }
-        .fab.fa-js { color: #f7df1e; }
-        .fab.fa-python { color: #3776ab; }
-        .fab.fa-git-alt { color: #f14e32; }
-        .experience {
-            padding: 6rem 0;
-            background-color: white;
-        }
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 0;
-        }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            width: 2px;
-            height: 100%;
-            background-color: var(--primary-color);
-            left: 50%;
-            transform: translateX(-50%);
-            top: 0;
-        }
-        .timeline-item {
-            margin-bottom: 3rem;
-            position: relative;
-            width: 50%;
-            padding-right: 2rem;
-        }
-        .timeline-item:nth-child(even) {
-            margin-left: auto;
-            padding-right: 0;
-            padding-left: 2rem;
-        }
-        .timeline-content {
-            background-color: var(--light-bg);
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        .timeline-date {
-            font-family: var(--code-font);
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-        .timeline-title {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            color: var(--dark-bg);
-        }
-        .projects {
-            padding: 6rem 0;
-            background-color: var(--light-bg);
-        }
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .project-card {
-            background-color: white;
-            border-radius: 0.5rem;
-            overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-        .project-image {
-            height: 200px;
-            background-color: var(--medium-bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-            font-size: 3rem;
-        }
-        .project-content {
-            padding: 1.5rem;
-        }
-        .project-title {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            color: var(--dark-bg);
-        }
-        .contact {
-            padding: 6rem 0;
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-        }
-        .contact-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 4rem;
-        }
-        .contact-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-        .contact-links {
-            list-style: none;
-        }
-        .contact-links li {
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        .contact-links i {
-            color: var(--secondary-color);
-        }
-        .contact-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .contact-links a:hover {
-            color: var(--secondary-color);
-        }
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: var(--text-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: all 0.3s;
-        }
-        .social-links a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-        .footer {
-            background-color: var(--medium-bg);
-            color: var(--text-light);
-            text-align: center;
-            padding: 2rem 0;
-        }
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            .timeline::before {
-                left: 0;
-            }
-            .timeline-item {
-                width: 100%;
-                padding-left: 2rem;
-                padding-right: 0;
-            }
-            .timeline-item:nth-child(even) {
-                padding-left: 2rem;
-            }
-            .nav-links {
-                display: none;
-            }
-        }
+    :root {
+        --primary-color: #2563eb;
+        --secondary-color: #10b981;
+        --dark-bg: #0f172a;
+        --medium-bg: #1e293b;
+        --light-bg: #f8fafc;
+        --text-light: #f8fafc;
+        --text-dark: #1e293b;
+        --code-font: 'JetBrains Mono', monospace;
+        --main-font: 'Inter', sans-serif;
+        --accent-color: #3b82f6;
+        --card-bg: #fff;
+        --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        --timeline-bar: #2563eb;
+        --link-hover: #10b981;
+    }
+    body.dark-mode {
+        --primary-color: #60a5fa;
+        --secondary-color: #4ade80;
+        --dark-bg: #111827;
+        --medium-bg: #1e293b;
+        --light-bg: #171c28;
+        --text-light: #f8fafc;
+        --text-dark: #e5e7eb;
+        --card-bg: #232c3a;
+        --accent-color: #60a5fa;
+        --shadow: 0 4px 18px -2px rgba(36, 54, 82, 0.25);
+        --timeline-bar: #4ade80;
+        --link-hover: #60a5fa;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        font-family: var(--main-font);
+        line-height: 1.6;
+        color: var(--text-dark);
+        background-color: var(--light-bg);
+        transition: background 0.3s, color 0.3s;
+    }
+    .terminal-header {
+        background-color: var(--dark-bg);
+        color: var(--text-light);
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: var(--code-font);
+    }
+    .terminal-controls span {
+        display: inline-block;
+        width: 12px; height: 12px; border-radius: 50%; margin-left: 5px;
+    }
+    .close { background-color: #ef4444; }
+    .minimize { background-color: #f59e0b; }
+    .maximize { background-color: #10b981; }
+    .header {
+        background-color: var(--dark-bg);
+        padding: 1rem 0;
+        position: sticky; top: 0; z-index: 100;
+    }
+    .container {
+        width: 90%; max-width: 1200px; margin: 0 auto;
+    }
+    .nav-container {
+        display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo {
+        font-family: var(--code-font);
+        font-size: 1.5rem;
+        color: var(--text-light);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .logo i { color: var(--secondary-color); }
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+    }
+    .nav-links a {
+        color: var(--text-light);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    .nav-links a:hover {
+        color: var(--link-hover);
+    }
+    #toggle-dark {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.3rem;
+        color: var(--text-light);
+        transition: color 0.3s;
+        margin-left: 1rem;
+    }
+    #toggle-dark:hover { color: var(--secondary-color); }
+    .hero {
+        min-height: 60vh;
+        background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.8)),
+                    url('/api/placeholder/1920/1080') no-repeat center/cover;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+    body.dark-mode .hero {
+        background: linear-gradient(135deg, rgba(17, 24, 39, 0.97), rgba(30, 41, 59, 0.93)),
+                    url('/api/placeholder/1920/1080') no-repeat center/cover;
+    }
+    .floating-icons {
+        position: absolute;
+        width: 100%; height: 100%; top: 0; left: 0; pointer-events: none;
+    }
+    .floating-icons .icon {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.08);
+        font-size: 1.5rem;
+        animation: float 15s infinite;
+    }
+    @keyframes float {
+        0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0; }
+        10% { opacity: 0.3; }
+        20% { transform: translate(15px, -15px) rotate(45deg) scale(1.2);}
+        40% { transform: translate(-15px, 15px) rotate(90deg) scale(1);}
+        60% { transform: translate(15px, 15px) rotate(180deg) scale(1.2);}
+        80% { transform: translate(-15px, -15px) rotate(360deg) scale(1);}
+        90% { opacity: 0.3; }
+        100% { transform: translate(0, 0) rotate(720deg) scale(1); opacity: 0;}
+    }
+    .floating-icons .icon:nth-child(1) { animation-delay: 0s; }
+    .floating-icons .icon:nth-child(2) { animation-delay: 1.5s; }
+    .floating-icons .icon:nth-child(3) { animation-delay: 3s; }
+    .floating-icons .icon:nth-child(4) { animation-delay: 4.5s; }
+    .floating-icons .icon:nth-child(5) { animation-delay: 6s; }
+    .floating-icons .icon:nth-child(6) { animation-delay: 7.5s; }
+    .floating-icons .icon:nth-child(7) { animation-delay: 9s; }
+    .floating-icons .icon:nth-child(8) { animation-delay: 10.5s; }
+    .floating-icons .icon:nth-child(9) { animation-delay: 12s; }
+    .floating-icons .icon:nth-child(10) { animation-delay: 13.5s; }
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        color: var(--text-light);
+        max-width: 800px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .hero-title {
+        font-family: var(--code-font);
+        font-size: 1rem;
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+    }
+    .hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+    .hero h2 {
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-top: 1rem;
+        color: var(--secondary-color);
+    }
+    .skills,
+    .projects {
+        padding: 6rem 0;
+        background-color: var(--light-bg);
+    }
+    .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .section-title {
+        font-size: 2.25rem;
+        color: var(--dark-bg);
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+    }
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: var(--secondary-color);
+    }
+    body.dark-mode .section-title { color: var(--text-light);}
+    .skills-grid,
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    .skill-card,
+    .project-card {
+        background-color: var(--card-bg);
+        border-radius: 0.5rem;
+        padding: 2rem;
+        box-shadow: var(--shadow);
+        transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    }
+    .skill-card:hover,
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.12);
+    }
+    .skill-icon {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+    .skill-title {
+        font-size: 1.25rem;
+        color: var(--dark-bg);
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+    body.dark-mode .skill-title { color: var(--text-light);}
+    .skill-list { list-style: none; }
+    .skill-list li {
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .skill-list i {
+        color: var(--secondary-color);
+        font-size: 0.875rem;
+        margin-right: 10px;
+    }
+    .progress-bar {
+        width: 100%;
+        height: 6px;
+        background-color: #e5e7eb;
+        border-radius: 3px;
+        margin-top: 5px;
+    }
+    body.dark-mode .progress-bar { background: #334155; }
+    .progress {
+        height: 100%;
+        background-color: var(--secondary-color);
+        border-radius: 3px;
+        transition: width 0.5s ease-in-out;
+    }
+    .fab.fa-html5 { color: #e34f26; }
+    .fab.fa-css3-alt { color: #2965f1; }
+    .fab.fa-js { color: #f7df1e; }
+    .fab.fa-python { color: #3776ab; }
+    .fab.fa-git-alt { color: #f14e32; }
+    .experience {
+        padding: 6rem 0;
+        background-color: var(--light-bg);
+    }
+    /* TRAJETÓRIA PROFISSIONAL */
+    .trajetoria-card {
+        max-width:900px;margin:0 auto;font-size:1.15rem;
+        color:var(--text-dark);
+        background:var(--card-bg);
+        border-radius:10px;
+        box-shadow:var(--shadow);
+        padding:2rem;
+        transition: background 0.3s, color 0.3s;
+    }
+    body.dark-mode .trajetoria-card { color: var(--text-light);}
+    .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+    .timeline::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background-color: var(--timeline-bar);
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+    }
+    .timeline-item {
+        margin-bottom: 3rem;
+        position: relative;
+        width: 50%;
+        padding-right: 2rem;
+    }
+    .timeline-item:nth-child(even) {
+        margin-left: auto;
+        padding-right: 0;
+        padding-left: 2rem;
+    }
+    .timeline-content {
+        background-color: var(--card-bg);
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: var(--shadow);
+        transition: background 0.3s;
+    }
+    .timeline-date {
+        font-family: var(--code-font);
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+    }
+    .timeline-title {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        color: var(--dark-bg);
+    }
+    body.dark-mode .timeline-title { color: var(--text-light);}
+    .contact {
+        padding: 6rem 0;
+        background-color: var(--dark-bg);
+        color: var(--text-light);
+    }
+    .contact-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 4rem;
+    }
+    .contact-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .contact-links {
+        list-style: none;
+    }
+    .contact-links li {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .contact-links i {
+        color: var(--secondary-color);
+    }
+    .contact-links a {
+        color: var(--text-light);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    .contact-links a:hover {
+        color: var(--secondary-color);
+    }
+    .social-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    .social-links a {
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--text-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.3s;
+    }
+    .social-links a:hover {
+        background-color: var(--secondary-color);
+        color: var(--dark-bg);
+        transform: translateY(-2px);
+    }
+    .footer {
+        background-color: var(--medium-bg);
+        color: var(--text-light);
+        text-align: center;
+        padding: 2rem 0;
+    }
+    @media (max-width: 768px) {
+        .hero h1 { font-size: 2.5rem; }
+        .timeline::before { left: 0; }
+        .timeline-item { width: 100%; padding-left: 2rem; padding-right: 0; }
+        .timeline-item:nth-child(even) { padding-left: 2rem; }
+        .nav-links { display: none; }
+        #toggle-dark { margin-left: 0.5rem;}
+    }
     </style>
 </head>
 <body>
@@ -555,15 +447,20 @@
                 <ul class="nav-links">
                     <li><a href="#about">Sobre</a></li>
                     <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#trajetoria">Trajetória</a></li>
                     <li><a href="#experience">Experiência</a></li>
                     <li><a href="#education">Formação</a></li>
                     <li><a href="#projects">Projetos</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
             </nav>
+            <!-- Botão modo escuro/claro -->
+            <button id="toggle-dark" aria-label="Alternar modo escuro/claro" title="Alternar modo escuro/claro">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </header>
-    <!-- HERO (Sobre) -->
+    <!-- HERO MINIMALISTA -->
     <section class="hero" id="about">
         <div class="floating-icons">
             <i class="icon fas fa-server" style="left: 10%; top: 20%"></i>
@@ -579,14 +476,22 @@
         </div>
         <div class="container">
             <div class="hero-content">
-                <div class="hero-title">
-                    <span>$ whoami</span>
-                </div>
                 <h1>Leandro Venturini Sodré</h1>
+                <h2>Analista de Suporte e Infraestrutura de TI</h2>
+            </div>
+        </div>
+    </section>
+    <!-- NOVA SEÇÃO: TRAJETÓRIA PROFISSIONAL -->
+    <section class="skills" id="trajetoria" style="padding-top:4rem;padding-bottom:2rem;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trajetória Profissional</h2>
+            </div>
+            <div class="trajetoria-card">
                 <p>
-                    Analista de Suporte Técnico e Infraestrutura de TI com mais de 12 anos de experiência em ambientes corporativos, governamentais e operações de alta demanda. Perfil prático, comunicativo e focado em manter a estrutura tecnológica das empresas sempre funcionando com segurança, eficiência e agilidade. 
+                    Sou Analista de Suporte Técnico e Infraestrutura de TI, com mais de 12 anos de experiência em ambientes corporativos, governamentais e de alta demanda operacional. Tenho perfil prático, comunicativo e focado em manter a estrutura tecnológica das empresas sempre funcionando com segurança, eficiência e agilidade.
                 </p>
-                <ul style="margin: 1.5rem 0 1.5rem 1.5rem; padding-left: 1em; color: #1e293b;">
+                <ul style="margin:1.5rem 0 1.5rem 1.5rem; color:inherit;">
                     <li>🔧 Suporte técnico de 1º, 2º e 3º níveis — presencial, remoto e via ITSM</li>
                     <li>🖥️ Instalação e manutenção de computadores, Windows 10/11, Microsoft 365 e periféricos</li>
                     <li>🌐 Administração de redes LAN/WLAN, roteadores, cabeamento e diagnóstico de falhas</li>
@@ -594,25 +499,16 @@
                     <li>☁️ Ambientes híbridos e computação em nuvem (Microsoft Azure)</li>
                     <li>🔐 Políticas de segurança da informação, backup, controle de acessos e antivírus corporativo</li>
                     <li>📄 Scripts em PowerShell e Batch para automação de tarefas</li>
-                    <li>📁 Gestão documental de projetos técnicos, com foco em rastreabilidade e padronização</li>
+                    <li>📁 Gestão documental de projetos técnicos com foco em rastreabilidade e padronização</li>
                 </ul>
                 <p>
-                    <strong>Destaque:</strong> No DER-SP, liderei a reestruturação do laboratório de informática e implantei um sistema de inventário físico e digital, aumentando em 80% a eficiência operacional e otimizando fluxos de suporte, documentação e gestão de equipamentos.
+                    <strong>🚀 Destaque:</strong> No DER-SP, liderei a reestruturação do laboratório de informática e implantei um sistema de inventário físico e digital, resultando em aumento de 80% na eficiência operacional, com melhoria nos fluxos de suporte, documentação e gestão de equipamentos.
                 </p>
                 <p>
-                    Atuo com clareza, agilidade e compromisso, atendendo desde equipes operacionais até diretorias. Estou em constante atualização em tecnologias, ITIL e segurança digital. <br>
-                    Atualmente trabalho de forma autônoma pela <b>LVSTECH</b>, oferecendo soluções personalizadas para empresas de diversos portes. Disponível para atuar presencialmente em Piracicaba, Santa Bárbara d’Oeste, Limeira e Rio Claro.
+                    Sou um profissional técnico e humano, capaz de atender desde o time operacional até a diretoria, prezando por clareza, agilidade e compromisso. Busco constante atualização em tecnologias e boas práticas como ITIL e segurança digital.<br>
+                    <b>Atualmente atuo de forma autônoma pela LVSTECH</b>, com soluções personalizadas para empresas de diversos portes.<br>
+                    Disponível para atuar presencialmente em Piracicaba, Santa Bárbara d’Oeste, Limeira e Rio Claro.
                 </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-envelope"></i>
-                        Contato
-                    </a>
-                    <a href="https://www.linkedin.com/in/lvsodre" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-linkedin"></i>
-                        LinkedIn
-                    </a>
-                </div>
             </div>
         </div>
     </section>
@@ -899,23 +795,39 @@
         </div>
     </footer>
     <script>
-        // Marca o link como ativo ao clicar (efeito visual no menu)
-        const navLinks = document.querySelectorAll('.nav-links a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
+    // Alternância modo escuro/claro + ícone dinâmico
+    const btnToggle = document.getElementById('toggle-dark');
+    function updateDarkBtn() {
+        btnToggle.innerHTML = document.body.classList.contains('dark-mode')
+            ? '<i class="fas fa-sun"></i>'
+            : '<i class="fas fa-moon"></i>';
+    }
+    btnToggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        updateDarkBtn();
+    });
+    window.addEventListener('DOMContentLoaded', function() {
+        const theme = localStorage.getItem('theme');
+        if(theme === 'dark') document.body.classList.add('dark-mode');
+        updateDarkBtn();
+    });
+    // Menu ativo e scroll suave
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
             });
         });
-        // Animação suave do scroll para âncoras internas
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+    });
     </script>
 </body>
 </html>
